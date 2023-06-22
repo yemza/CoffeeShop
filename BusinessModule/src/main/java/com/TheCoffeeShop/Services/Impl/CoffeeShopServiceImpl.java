@@ -1,11 +1,13 @@
 package com.TheCoffeeShop.Services.Impl;
 
-import com.TheCoffeShop.DAOEntities.CoffeeShop;
-import com.TheCoffeShop.Repositories.CoffeeShopRepository;
+import com.TheCoffeeShop.DAOEntities.CoffeeShop;
+import com.TheCoffeeShop.Repositories.CoffeeShopRepository;
 import com.TheCoffeeShop.Services.CoffeeShopService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CoffeeShopServiceImpl implements CoffeeShopService {
 
    private CoffeeShopRepository coffeeShopRepository;

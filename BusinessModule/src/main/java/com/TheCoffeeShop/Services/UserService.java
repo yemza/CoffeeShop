@@ -1,6 +1,6 @@
 package com.TheCoffeeShop.Services;
 
-import com.TheCoffeShop.DAOEntities.User;
+import com.TheCoffeeShop.DAOEntities.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

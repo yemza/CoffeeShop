@@ -1,6 +1,6 @@
 package com.TheCoffeeShop.Services;
 
-import com.TheCoffeShop.DAOEntities.CoffeeShop;
+import com.TheCoffeeShop.DAOEntities.CoffeeShop;
 
 import java.util.List;
 

@@ -9,6 +9,10 @@
   	<module>BusinessModule</module>
   	<module>WebModule</module>
   </modules>
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>

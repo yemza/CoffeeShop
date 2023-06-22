@@ -1,7 +1,7 @@
 package com.TheCoffeeShop.Services.Impl;
 
-import com.TheCoffeShop.DAOEntities.User;
-import com.TheCoffeShop.Repositories.UserRepository;
+import com.TheCoffeeShop.DAOEntities.User;
+import com.TheCoffeeShop.Repositories.UserRepository;
 import com.TheCoffeeShop.Services.UserService;
 import org.springframework.stereotype.Service;
 

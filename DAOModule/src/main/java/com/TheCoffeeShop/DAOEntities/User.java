@@ -1,23 +1,60 @@
-package com.TheCoffeeShop.DTO;
+package com.TheCoffeeShop.DAOEntities;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name="User")
+public class User {
 
-public class UserDTO {
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id" , nullable = false)
     private Long idUser;
+
+    @Column(name = "first_name" )
     private String firstName;
+
+    @Column(name = "last_name" )
     private String lastName;
+
+    @Column(name = "CNI" )
     private String CNI;
+
+    @Column(name = "address" )
     private String address;
+
+    @Column(name = "identity_image" )
     private String identityImage;
+
+    @Column(name = "image" )
     private String image;
-    private CityDTO city;
-    private Set<PhoneNumberDTO> phoneNumbers;
-    private Set<RoleDTO> roles;
-    private Set<OrderDTO> orders;
+
+    @ManyToOne
+    @JoinColumn(name="city_id")
+    private City city;
+
+
+    @OneToMany(mappedBy = "user")
+    private Set<PhoneNumber> phoneNumbers;
+
+
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(
+      name = "user_role",
+      joinColumns = { @JoinColumn(name = "id_user", referencedColumnName = "user_id") },
+      inverseJoinColumns = { @JoinColumn(name = "role_name", referencedColumnName = "role") }
+    )
+    private Set<Role> roles = new HashSet<>();;
+
+
+    @OneToMany(mappedBy = "user")
+    private Set<Order> orders;
+
 
     public Long getIdUser() {
         return idUser;
@@ -75,35 +112,35 @@ public class UserDTO {
         this.image = image;
     }
 
-    public CityDTO getCity() {
+    public City getCity() {
         return city;
     }
 
-    public void setCity(CityDTO city) {
+    public void setCity(City city) {
         this.city = city;
     }
 
-    public Set<PhoneNumberDTO> getPhoneNumbers() {
+    public Set<PhoneNumber> getPhoneNumbers() {
         return phoneNumbers;
     }
 
-    public void setPhoneNumbers(Set<PhoneNumberDTO> phoneNumbers) {
+    public void setPhoneNumbers(Set<PhoneNumber> phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
     }
 
-    public Set<RoleDTO> getRoles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<RoleDTO> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
 
-    public Set<OrderDTO> getOrders() {
+    public Set<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(Set<OrderDTO> orders) {
+    public void setOrders(Set<Order> orders) {
         this.orders = orders;
     }
 }
