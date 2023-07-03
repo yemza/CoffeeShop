@@ -21,7 +21,7 @@ public class MenuItem {
   @OneToMany(mappedBy = "menuItem")
   private Set<MenuItemDetails> menuItemDetails;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.EAGER)
   @JoinColumn(name = "menu_category_id")
   private MenuCategory menuCategory;
 
