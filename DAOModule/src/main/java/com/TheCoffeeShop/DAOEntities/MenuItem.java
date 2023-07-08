@@ -15,6 +15,9 @@ public class MenuItem {
   @Column(name = "name")
   private String name;
 
+  @Column(name = "image_item")
+  private String itemImage;
+
   @Column(name = "ingredient")
   private String ingredient;
 
@@ -75,5 +78,13 @@ public class MenuItem {
 
   public void setOrderDetails(Set<OrderDetails> orderDetails) {
     this.orderDetails = orderDetails;
+  }
+
+  public String getItemImage() {
+    return itemImage;
+  }
+
+  public void setItemImage(String itemImage) {
+    this.itemImage = itemImage;
   }
 }

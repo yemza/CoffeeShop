@@ -23,10 +23,6 @@ public class City {
 
   @OneToMany(mappedBy = "city")
   @JsonIgnore
-  private Set<CoffeeShop> coffeeShops;
-
-  @OneToMany(mappedBy = "city")
-  @JsonIgnore
   private Set<User> users ;
 
   public Long getIdCity() {
@@ -51,14 +47,6 @@ public class City {
 
   public void setCountry(Country country) {
     this.country = country;
-  }
-
-  public Set<CoffeeShop> getCoffeeShops() {
-    return coffeeShops;
-  }
-
-  public void setCoffeeShops(Set<CoffeeShop> coffeeShops) {
-    this.coffeeShops = coffeeShops;
   }
 
   public Set<User> getUsers() {

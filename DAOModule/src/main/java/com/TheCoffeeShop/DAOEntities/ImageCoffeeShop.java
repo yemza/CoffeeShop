@@ -3,7 +3,7 @@ package com.TheCoffeeShop.DAOEntities;
 import javax.persistence.*;
 
 @Entity()
-@Table(name="Country")
+@Table(name="image_coffee_shop")
 public class ImageCoffeeShop {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
