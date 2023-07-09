@@ -15,6 +15,7 @@ public interface MenuItemMapper {
 
   @Mapping(target="idMenuItem", source = "idMenuItem")
   @Mapping(target="name", source = "name")
+  @Mapping(target="itemImage", source = "itemImage")
   @Mapping(target="ingredient", source = "ingredient")
   @Mapping(target="menuItemDetailsDTO", source = "menuItemDetails")
   @Mapping(target="menuCategoryDTO", source = "menuCategory")

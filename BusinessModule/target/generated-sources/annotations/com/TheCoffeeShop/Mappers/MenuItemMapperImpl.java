@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-06-24T21:43:38+0100",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
+    date = "2023-07-09T11:05:30+0100",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)"
 )
 @Component
 public class MenuItemMapperImpl implements MenuItemMapper {
@@ -31,6 +31,7 @@ public class MenuItemMapperImpl implements MenuItemMapper {
 
         menuItemDTO.setIdMenuItem( menuItem.getIdMenuItem() );
         menuItemDTO.setName( menuItem.getName() );
+        menuItemDTO.setItemImage( menuItem.getItemImage() );
         menuItemDTO.setIngredient( menuItem.getIngredient() );
         menuItemDTO.setMenuItemDetailsDTO( menuItemDetailsSetToMenuItemDetailsDTOSet( menuItem.getMenuItemDetails() ) );
         menuItemDTO.setMenuCategoryDTO( menuCategoryToMenuCategoryDTO( menuItem.getMenuCategory() ) );
@@ -53,6 +54,7 @@ public class MenuItemMapperImpl implements MenuItemMapper {
         menuItem.setMenuItemDetails( menuItemDetailsDTOSetToMenuItemDetailsSet( menuItemDTO.getMenuItemDetailsDTO() ) );
         menuItem.setMenuCategory( menuCategoryDTOToMenuCategory( menuItemDTO.getMenuCategoryDTO() ) );
         menuItem.setOrderDetails( orderDetailsDTOSetToOrderDetailsSet( menuItemDTO.getOrderDetailsDTO() ) );
+        menuItem.setItemImage( menuItemDTO.getItemImage() );
 
         return menuItem;
     }

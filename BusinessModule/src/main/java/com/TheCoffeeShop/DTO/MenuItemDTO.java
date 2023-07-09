@@ -10,6 +10,9 @@ public class MenuItemDTO {
 
   private String name;
 
+  private String itemImage;
+
+
   private String ingredient;
 
   private Set<MenuItemDetailsDTO> menuItemDetailsDTO;
@@ -65,5 +68,13 @@ public class MenuItemDTO {
 
   public void setOrderDetailsDTO(Set<OrderDetailsDTO> orderDetailsDTO) {
     this.orderDetailsDTO = orderDetailsDTO;
+  }
+
+  public String getItemImage() {
+    return itemImage;
+  }
+
+  public void setItemImage(String itemImage) {
+    this.itemImage = itemImage;
   }
 }

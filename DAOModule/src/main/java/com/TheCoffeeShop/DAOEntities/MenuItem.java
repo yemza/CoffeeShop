@@ -15,7 +15,7 @@ public class MenuItem {
   @Column(name = "name")
   private String name;
 
-  @Column(name = "image_item")
+  @Column(name = "image_item" , length = Integer.MAX_VALUE)
   private String itemImage;
 
   @Column(name = "ingredient")
